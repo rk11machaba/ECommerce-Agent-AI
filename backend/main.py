@@ -10,11 +10,11 @@ load_dotenv()
 app = FastAPI()
 
 # Supabase Credentials
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+#SUPABASE_URL = os.getenv("SUPABASE_URL")
+#SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 # Initialize Supabase Client
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+#supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.get("/")
 def read_root():
