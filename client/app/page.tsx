@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from 'react'
 
 const page = () => {
-  const [message, setMessage] = useState("loading")
+  const [message, setMessage] = useState("loading");
+  const [items, setItems] = useState([])
+
   useEffect(() => {
     fetch("http://localhost:8080/api/home")
     .then(
@@ -10,12 +12,25 @@ const page = () => {
     )
     .then((data)=>{
       // retrieve data
-      setMessage(data.message)
+      setMessage(data.message);
+      setItems(data.items);
+
+      console.log(data.message)
+      console.log(data.items);
     });
   }, []);
-  return (
-    <div>{message}</div>
-  )
+
+  return(
+    <div>
+      <div>{ message }</div>
+      {
+        items.map((item, index) =>(
+          <div key={index}>{ item }</div>
+        ))
+      }
+    </div>
+  );
+
 }
 
 export default page

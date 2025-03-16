@@ -9,7 +9,8 @@ CORS(app)
 @app.route("/api/home", methods=['GET'])
 def return_home():
     return jsonify({
-        "message": "Hello World"
+        "message": "Welcome to Our Store",
+        "items": ['Laptop', 'Smart Phone', 'Router']
     })
 
 # run app
