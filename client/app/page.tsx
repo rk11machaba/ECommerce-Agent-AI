@@ -15,8 +15,6 @@ const Page = () => {
       setMessage(data.message);
       setItems(data.items);
 
-      console.log(data.message)
-      console.log(data.items);
     });
   }, []);
 
