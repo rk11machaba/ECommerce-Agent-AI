@@ -1,12 +1,12 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-const page = () => {
-  const [message, setMessage] = useState("loading");
+const Page = () => {
+  const [message, setMessage] = useState("Loading");
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/home")
+    fetch("http://localhost:5000/api/home")
     .then(
       (response)=>response.json()
     )
@@ -33,4 +33,4 @@ const page = () => {
 
 }
 
-export default page
+export default Page
