@@ -6,7 +6,6 @@ load_dotenv()
 gemini_key = os.getenv("gemini_key")
 
 # configure api key
-import os
 os.environ["GOOGLE_API_KEY"] = gemini_key
 
 # use gemini for prompting
