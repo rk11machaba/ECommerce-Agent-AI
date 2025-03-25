@@ -19,13 +19,15 @@ const Page = () => {
   }, []);
 
   return(
-    <div>
+    <div className='flex flex-col items-center justify-between'>
       <div>{ message }</div>
-      {
-        items.map((item, index) =>(
-          <div key={index}>{ item }</div>
-        ))
-      }
+      <div>
+        {
+          items.map((item, index) =>(
+            <div key={index}>{ item }</div>
+          ))
+        }
+      </div>
     </div>
   );
 

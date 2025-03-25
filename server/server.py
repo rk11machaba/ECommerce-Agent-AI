@@ -3,6 +3,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
 gemini_key = os.getenv("gemini_key")
 
 # configure api key
@@ -11,6 +12,7 @@ os.environ["GOOGLE_API_KEY"] = gemini_key
 #use gemini for prompting
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
+
 
 gemini = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
@@ -24,7 +26,7 @@ CORS(app)
 def return_home():
 
     # try single prompt
-    prompt = "Please write a welcome message for our store"
+    prompt = "Please write a one line welcome message for our store"
 
     # call llm
     response = gemini.invoke(prompt)
