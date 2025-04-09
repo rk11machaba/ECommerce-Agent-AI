@@ -20,7 +20,7 @@ const Page = () => {
 
   return(
     <div className='flex flex-col items-center justify-between'>
-      <div>{ message }</div>
+      <div className='bg-gray'>{ message }</div>
       <div>
         {
           items.map((item, index) =>(
