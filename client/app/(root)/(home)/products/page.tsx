@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const Page = () => {
+const Products = () => {
   interface Product {
     name: string;
     brand: string;
@@ -95,4 +95,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Products;
