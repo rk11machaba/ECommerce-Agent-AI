@@ -8,7 +8,7 @@ const Page = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/home")
+    fetch("http://localhost:5000/api/expiring-products")
     .then(
       (response)=>response.json()
     )
@@ -39,6 +39,7 @@ const Page = () => {
           {
             outOfStockProducts
           }
+          ...
         </p>
       </div>
     </div>
