@@ -11,6 +11,10 @@ export const sidebarLinks = [
         route: '/products',
     },
     {
+        label: 'Sell',
+        route: '/sell',
+    },
+    {
         label: 'Expiring Products',
         route: '/expiring-products',
     },
