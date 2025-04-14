@@ -11,7 +11,7 @@ const Expiring_Products = () => {
       .then((data) => {
         // Retrieve data as plain text
         setExpiringProducts(data.expiring_products); //  this is a string
-        setExpiredProducts(data.get_expired_products); // this is another string
+        setExpiredProducts(data.expired_products); // this is another string
       })
       .catch((error) => {
         console.error("Error fetching expiring products:", error);
