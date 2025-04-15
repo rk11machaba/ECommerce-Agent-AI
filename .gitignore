@@ -6,8 +6,9 @@
 .env.production
 
 # venv
-.venv/
-venv/
+/venv/Include
+/venv/Lib
+/venv/Scripts
 
 # main
 main/
